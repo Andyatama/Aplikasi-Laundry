@@ -12,9 +12,9 @@
             @csrf
 
             <div class="form-group">
-                <label for="nama">Nama</label>
+                <label for="nama">Nama Outlet</label>
                 <input type="text" class="form-control @error('nama') is-invalid @enderror" name="nama" id="nama"
-                    placeholder="Nama" autocomplete="off" value="{{ old('name') }}">
+                    placeholder="Nama Outlet" autocomplete="off" value="{{ old('name') }}">
                 @error('nama')
                 <span class="text-danger">{{ $message }}</span>
                 @enderror
@@ -30,10 +30,10 @@
             </div>
 
             <div class="form-group">
-                <label for="no_telp">No Telp</label>
-                <input type="text" class="form-control @error('no_telp') is-invalid @enderror" name="no_telp"
-                    id="no_telp" placeholder="No Telp" autocomplete="off" value="{{ old('no_telp') }}">
-                @error('no_telp')
+                <label for="telepon">Nomor Telepon</label>
+                <input type="text" class="form-control @error('telepon') is-invalid @enderror" name="telepon"
+                    id="telepon" placeholder="Nomor Telepon" autocomplete="off" value="{{ old('telepon') }}">
+                @error('telepon')
                 <span class="text-danger">{{ $message }}</span>
                 @enderror
             </div>

@@ -20,7 +20,7 @@
             <th>No</th>
             <th>Nama</th>
             <th>Alamat</th>
-            <th>No Telp</th>
+            <th>No Telepon</th>
             <th>aksi</th>
         </tr>
     </thead>
@@ -30,7 +30,7 @@
             <td scope="row">{{ $loop->iteration }}</td>
             <td>{{  $out->nama  }}</td>
             <td>{{ $out->alamat }}</td>
-            <td>{{  $out->no_telp  }}</td>
+            <td>{{  $out->telepon  }}</td>
             <td>
                 <div class="d-flex">
                     <a href="{{ route('outlet.edit', $out->id) }}" class="btn mr-2 rounded-circle py-2" style="background-color: #30D5C8"><i class="fas fa-fw fa-pen text-white"></i></a>

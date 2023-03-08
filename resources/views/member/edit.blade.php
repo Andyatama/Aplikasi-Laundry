@@ -60,10 +60,10 @@
             </div>
 
             <div class="form-group">
-                <label for="tlp">No Telp</label>
-                <input type="text" class="form-control @error('tlp') is-invalid @enderror" name="tlp"
-                    id="tlp" placeholder="No Telp" autocomplete="off" value="{{ $member->tlp }}">
-                @error('tlp')
+                <label for="telepon">Nomor Telepon</label>
+                <input type="text" class="form-control @error('telepon') is-invalid @enderror" name="telepon"
+                    id="telepon" placeholder="Nomor Telepon" autocomplete="off" value="{{ $member->telepon }}">
+                @error('telepon')
                 <span class="text-danger">{{ $message }}</span>
                 @enderror
             </div>

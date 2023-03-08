@@ -18,9 +18,9 @@ return new class extends Migration
             $table->integer('id_outlet');
             $table->string('kode_invoice');
             $table->integer('id_member');
-            $table->dateTime('tgl')->nullable();
-            $table->dateTime('tgl_bayar')->nullable();
-            $table->dateTime('batas_waktu')->nullable();
+            $table->date('tgl')->nullable();
+            $table->date('tgl_bayar')->nullable();
+            $table->date('batas_waktu')->nullable();
             $table->bigInteger('total_harga')->nullable();
             $table->integer('biaya_tambahan')->nullable();
             $table->double('diskon')->nullable();

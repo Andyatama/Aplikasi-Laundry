@@ -21,7 +21,7 @@
             <th>Nama</th>
             <th>Alamat</th>
             <th>Jenis Kelamin</th>
-            <th>No Telp</th>
+            <th>No Telepon</th>
             <th>aksi</th>
         </tr>
     </thead>
@@ -32,7 +32,7 @@
             <td>{{ $item->nama }}</td>
             <td>{{ $item->alamat }}</td>
             <td>{{ $item->jenis_kelamin }}</td>
-            <td>{{ $item->tlp }}</td>
+            <td>{{ $item->telepon }}</td>
             <td>
                 <div class="d-flex">
                     <a href="{{ route('member.edit', $item->id) }}" class="btn mr-2 rounded-circle py-2" 

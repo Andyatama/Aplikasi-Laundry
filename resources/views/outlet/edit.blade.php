@@ -33,10 +33,10 @@
             </div>
 
             <div class="form-group">
-                <label for="no_telp">No Telp</label>
-                <input type="text" class="form-control @error('no_telp') is-invalid @enderror" name="no_telp"
-                    id="no_telp" placeholder="No Telp" autocomplete="off" value="{{ $outlet->no_telp }}">
-                @error('no_telp')
+                <label for="telepon">Nomor Telepon</label>
+                <input type="text" class="form-control @error('telepon') is-invalid @enderror" name="telepon"
+                    id="telepon" placeholder="Nomor Telepon" autocomplete="off" value="{{ $outlet->telepon }}">
+                @error('telepon')
                 <span class="text-danger">{{ $message }}</span>
                 @enderror
             </div>

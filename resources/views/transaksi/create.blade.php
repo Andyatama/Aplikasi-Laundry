@@ -43,10 +43,10 @@
 
                         <div class="col-md-12 col-12">
                             <div class="form-group">
-                                <label for="outlet">Member</label>
+                                <label for="member">Member</label>
                                 <select class="form-select form-control @error('id_member') is-invalid @enderror"
-                                    name="id_member" id="id_member" placeholder="Outlet" autocomplete="off"
-                                    value="{{ old('id_outlet') }}">
+                                    name="id_member" id="id_member" placeholder="Member" autocomplete="off"
+                                    value="{{ old('id_member') }}">
                                     <option selected name="id_member">Member</option>
                                     @foreach ($member as $mem)
                                     <option value="{{ $mem->id }}">{{ $mem->nama }}</option>

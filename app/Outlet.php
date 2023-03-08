@@ -10,6 +10,6 @@ class Outlet extends Model
     protected $table = 'tb_outlet';
 
     protected $fillable = [
-        'nama', 'alamat', 'no_telp'
+        'nama', 'alamat', 'telepon'
     ];
 }

@@ -35,7 +35,7 @@
                             <div class="col-12">
                                 <div class="form-group">
                                     <label for="batas_waktu">Batas Waktu</label>
-                                    <input type="datetime-local" style=" border-bottom: 2px solid black;"
+                                    <input type="date" style=" border-bottom: 2px solid black;"
                                         class="form-control @error('batas_waktu') is-invalid @enderror"
                                         name="batas_waktu" id="batas_waktu" placeholder="nama paket" autocomplete="off"
                                         value="{{ old('batas_waktu') }}">

@@ -45,10 +45,16 @@ class OutletController extends Controller
     public function store(Request $request)
     {
 
-        Outlet::create([
-            'nama' => $request->nama,
-            'alamat' => $request->alamat,
-            'no_telp' => $request->no_telp,
+        // Outlet::create([
+        //     'nama' => $request->nama,
+        //     'alamat' => $request->alamat,
+        //     'no_telp' => $request->no_telp,
+        // ]);
+
+        $this->validate($request , [
+            'nama' => 'required|max:255',
+            'alamat' => 'required|max:255',
+            'telepon' => 'required|numeric'
         ]);
 
         Outlet::create($request->all());
@@ -94,6 +100,12 @@ class OutletController extends Controller
 
         $outlet = Outlet::find($id);
         $outlet->update($data);
+
+        $this->validate($request , [
+            'nama' => 'required|max:255',
+            'alamat' => 'required|max:255',
+            'no_tlp' => 'required|numeric'
+        ]);
 
         return redirect()->route('outlet.index')->with('message', 'Berhasil Memperbarui Outlet!');
     }

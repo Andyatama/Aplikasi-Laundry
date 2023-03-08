@@ -219,7 +219,7 @@
                             @if ($transaksi->dibayar=='belum dibayar')
                                <div class="form-group">
                                     <label for="tgl_bayar" style="font-size: 16px; font-weight: bold;">Tanggal Bayar</label>
-                                    <input type="datetime-local" style=" border-bottom: 2px solid black;"
+                                    <input type="date" style=" border-bottom: 2px solid black;"
                                         class="form-control @error('tgl_bayar') is-invalid @enderror" name="tgl_bayar"
                                         id="tgl_bayar" placeholder="Tanggal Bayar" autocomplete="off"
                                         value="{{ old('tgl_bayar') }}">
@@ -230,7 +230,7 @@
                             @elseif ($transaksi->dibayar=='dibayar')
                                 <div class="form-group">
                                     <label for="tgl_bayar" style="font-size: 16px; font-weight: bold;">Tanggal Bayar</label>
-                                    <input type="datetime-local" style=" border-bottom: 2px solid black;"
+                                    <input type="date" style=" border-bottom: 2px solid black;"
                                             class="form-control @error('tgl_bayar') is-invalid @enderror" name="tgl_bayar"
                                             id="tgl_bayar" placeholder="Tanggal Bayar" autocomplete="off"
                                             value="{{ old('tgl_bayar') }}">

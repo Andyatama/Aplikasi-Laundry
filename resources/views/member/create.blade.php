@@ -44,10 +44,10 @@
             </div>
 
             <div class="form-group">
-                <label for="tlp">No Telp</label>
-                <input type="text" class="form-control @error('tlp') is-invalid @enderror" name="tlp"
-                    id="tlp" placeholder="No Telp" autocomplete="off" value="{{ old('tlp') }}">
-                @error('tlp')
+                <label for="telepon">Nomor Telepon</label>
+                <input type="text" class="form-control @error('telepon') is-invalid @enderror" name="telepon"
+                    id="telepon" placeholder="Nomor telepon" autocomplete="off" value="{{ old('telepon') }}">
+                @error('telepon')
                 <span class="text-danger">{{ $message }}</span>
                 @enderror
             </div>

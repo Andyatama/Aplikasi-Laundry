@@ -53,7 +53,7 @@ class MemberController extends Controller
             'nama' => 'required',
             'alamat' => 'required',
             'jenis_kelamin' => 'required',
-            'tlp' => 'required|numeric'
+            'telepon' => 'required|numeric'
 
         ]);
 
@@ -100,6 +100,14 @@ class MemberController extends Controller
 
         $member = Member::find($id);
         $member->update($data);
+
+        $this->validate($request , [
+            'nama' => 'required',
+            'alamat' => 'required',
+            'jenis_kelamin' => 'required',
+            'telepon' => 'required|numeric'
+
+        ]);
 
         return redirect()->route('member.index')->with('message', 'Berhasil Memperbarui Member!');
     }

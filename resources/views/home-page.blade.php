@@ -2,609 +2,161 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
-
+<head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link href="https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
-
     <title>Laundry in Aja</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
 
-<!--
+    <!-- Favicon -->
+    <link href="img/laundry-machine.png" rel="icon">
 
-Breezed Template
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;800&display=swap" rel="stylesheet"> 
 
-https://templatemo.com/tm-543-breezed
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" rel="stylesheet">
 
--->
-    <!-- Additional CSS Files -->
-    <link rel="stylesheet" type="text/css" href="{{asset('templatemo_breezed/assets/css/bootstrap.min.css')}}">
+    <!-- Libraries Stylesheet -->
+    <link href="{{asset('laundry/lib/owlcarousel/assets/owl.carousel.min.css')}}" rel="stylesheet">
 
-    <link rel="stylesheet" type="text/css" href="{{asset('templatemo_breezed/assets/css/font-awesome.css')}}">
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="{{asset('laundry/css/style.css')}}" rel="stylesheet">
+</head>
 
-    <link rel="stylesheet" href="{{asset('templatemo_breezed/assets/css/templatemo-breezed.css')}}">
+<body>
+    <!-- Topbar Start -->
+    <!-- Topbar End -->
 
-    <link rel="stylesheet" href="{{asset('templatemo_breezed/assets/css/owl-carousel.css')}}">
 
-    <link rel="stylesheet" href="{{asset('templatemo_breezed/assets/css/lightbox.css')}}">
-
-    </head>
-    
-    <body>
-    
-    <!-- ***** Preloader Start ***** -->
-    <div id="preloader">
-        <div class="jumper">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-    </div>  
-    <!-- ***** Preloader End ***** -->
-    
-    
-    <!-- ***** Header Area Start ***** -->
-    <header class="header-area header-sticky">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <nav class="main-nav">
-                        <!-- ***** Logo Start ***** -->
-                        <a href="{{asset('img/laundry-machine.jpg')}}" class="logo" >
-                            Laundry in Aja
-                        </a>
-                        <!-- ***** Logo End ***** -->
-                        <!-- ***** Menu Start ***** -->
-                        <ul class="nav">
-                            {{-- <li class="scroll-to-section"><a href="#top" class="active">Home</a></li> --}}
-                            <li class="scroll-to-section"><a href="/login" style="color:black">login</a></li>
-                            {{-- <li class="scroll-to-section"><a href="#contact-us">Contact Us</a></li> 
-                            <div class="search-icon">
-                                <a href="#search"><i class="fa fa-search"></i></a>
-                            </div> --}}
-                        </ul>        
-                        {{-- <a class='menu-trigger'>
-                            <span>Menu</span>
-                        </a> --}}
-                        <!-- ***** Menu End ***** -->
-                    </nav>
+    <!-- Navbar Start -->
+    <div class="container-fluid position-relative nav-bar p-0">
+        <div class="container-lg position-relative p-0 px-lg-3" style="z-index: 9;">
+            <nav class="navbar navbar-expand-lg bg-white navbar-light py-3 py-lg-0 pl-3 pl-lg-5">
+                <a href="" class="navbar-brand">
+                    <h1 class="m-0 text-secondary"><span class="text-primary">Laundry</span> in Aja</h1>
+                </a>
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-between px-3" id="navbarCollapse">
+                    <div class="navbar-nav ml-auto py-0">
+                        <a href="home-page.blade.php" class="nav-item nav-link active">Home</a>
+                        <a href="/login" class="nav-item nav-link">Login</a>
+                    </div>
                 </div>
-            </div>
-        </div>
-    </header>
-    <!-- ***** Header Area End ***** -->
-    
-    <!-- ***** Search Area ***** -->
-    {{-- <div id="search">
-        <button type="button" class="close">×</button>
-        <form id="contact" action="#" method="get">
-            <fieldset>
-                <input type="search" name="q" placeholder="SEARCH KEYWORD(s)" aria-label="Search through site content">
-            </fieldset>
-            <fieldset>
-                <button type="submit" class="main-button">Search</button>
-            </fieldset>
-        </form>
-    </div> --}}
-
-    <!-- ***** Main Banner Area Start ***** -->
-    <div class="main-banner header-text" id="top">
-        <div class="Modern-Slider">
-          <!-- Item -->
-          <div class="item">
-            <div class="img-fill">
-                <img src="{{asset('img/hand.jpg')}}" alt="">
-                <div class="text-content">
-                  <h3 style="color:black">Selamat Datang Di Laundry in Aja</h3>
-                  <h5 style="color:black">Baju Bersih, Anda pun Nyaman</h5>
-                  {{-- <a href="#" class="main-stroked-button">Learn More</a>
-                  <a href="#" class="main-filled-button">Get It Now</a> --}}
-                </div>
-            </div>
-          </div>
-          <!-- // Item -->
-          <!-- Item -->
-          {{-- <div class="item">
-            <div class="img-fill">
-                <img src="assets/images/slide-02.jpg" alt="">
-                <div class="text-content">
-                  <h3>Integrated Marketing Media</h3>
-                  <h5>Best Digital Marketing</h5>
-                  <a href="#" class="main-stroked-button">Read More</a>
-                  <a href="#" class="main-filled-button">Take Action</a>
-                </div>
-            </div>
-          </div> --}}
-          <!-- // Item -->
-          <!-- Item -->
-          {{-- <div class="item">
-            <div class="img-fill">
-                <img src="assets/images/slide-03.jpg" alt="">
-                <div class="text-content">
-                  <h3>High Performance</h3>
-                  <h5>Robust and Speedy</h5>
-                  <a href="#" class="main-stroked-button">Learn More</a>
-                  <a href="#" class="main-filled-button">Get It Now</a>
-                </div>
-            </div>
-          </div> --}}
-          <!-- // Item -->
+            </nav>
         </div>
     </div>
-    {{-- <div class="scroll-down scroll-to-section"><a href="#about"><i class="fa fa-arrow-down"></i></a></div> --}}
-    <!-- ***** Main Banner Area End ***** -->
+    <!-- Navbar End -->
 
-    <!-- ***** About Area Starts ***** -->
-    <section class="section" id="about">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 col-md-6 col-xs-12">
-                    <div class="left-text-content">
-                        <div class="section-heading">
-                            <h6>Tentang Kita</h6>
-                            <h2>Mengapa Memilih Kami</h2>
-                        </div>
-                        {{-- <div class="row">
-                            <div class="col-md-6 col-sm-6">
-                                <div class="service-item">
-                                    <img src="assets/images/service-item-01.png" alt="">
-                                    <h4>Top Notch</h4>
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-sm-6">
-                                <div class="service-item">
-                                    <img src="assets/images/service-item-01.png" alt="">
-                                    <h4>Robust</h4>
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-sm-6">
-                                <div class="service-item">
-                                    <img src="assets/images/contact-info-03.png" alt="">
-                                    <h4>Reliable</h4>
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-sm-6">
-                                <div class="service-item">
-                                    <img src="assets/images/contact-info-03.png" alt="">
-                                    <h4>Up-to-date</h4>
-                                </div>
-                            </div>
-                            <div class="col-md-12">
-                                <a href="#" class="main-button-icon">
-                                    Learn More <i class="fa fa-arrow-right"></i>
-                                </a>
-                            </div> --}}
+
+    <!-- Carousel Start -->
+    <div class="container-fluid p-0">
+        <div id="header-carousel" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="w-100" src="img/bga.jpg" alt="Image">
+                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                        <div class="p-3" style="max-width: 900px;">
+                            <h4 class="text-white text-uppercase mb-md-3">Laundry in Aja</h4>
+                            <h1 class="display-3 text-white mb-md-4">Baju Bersih. Andapun Nyaman</h1>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-12 col-md-12 col-xs-12">
-                    <div class="right-text-content">
-                        <p>
-                            Tidak punya waktu mencuci sendiri? Mau laundry tapi takut baju hilang dan hasilnya
-                            berantakan? Tenang, DiLaundry in Aja bisa bantu kamu ngelaundry sambil menikmati waktu
-                            istirahatmu dirumah dengan mesin cuci kualitas di kelasnya. Semua jenis baju, tas, dan
-                            sepatu kesayanganmu, serahkan kepada kita! Dijamin hasilnya rapi, bersih, plus wangi. </p>
+                <div class="carousel-item">
+                    <img class="w-100" src="img/laundry.jpg" alt="Image">
+                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                        <div class="p-3" style="max-width: 900px;">
+                            <h4 class="text-white text-uppercase mb-md-3">Laundry in Aja</h4>
+                            <h1 class="display-3 text-white mb-md-4">Dilayani Oleh Staff yang Profesional</h1>
+                        </div>
                     </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#header-carousel" data-slide="prev">
+                <div class="btn btn-secondary" style="width: 45px; height: 45px;">
+                    <span class="carousel-control-prev-icon mb-n2"></span>
+                </div>
+            </a>
+            <a class="carousel-control-next" href="#header-carousel" data-slide="next">
+                <div class="btn btn-secondary" style="width: 45px; height: 45px;">
+                    <span class="carousel-control-next-icon mb-n2"></span>
+                </div>
+            </a>
+        </div>
+    </div>
+    <!-- Carousel End -->
+
+    <!-- About Start -->
+    <div class="container-fluid py-5">
+        <div class="container pt-0 pt-lg-4">
+            <div class="row align-items-center">
+                <div class="col-lg-5">
+                    <img class="img-fluid" src="img/hand.jpg" alt="">
+                </div>
+                <div class="col-lg-7 mt-5 mt-lg-0 pl-lg-5">
+                    <h6 class="text-secondary text-uppercase font-weight-medium mb-3">Tentang Kita</h6>
+                    <h1 class="mb-4">Laundry in Aja</h1>
+                    <h5 class="font-weight-medium font-italic mb-4">Mengapa Memilih Kami?</h5>
+                    <p class="mb-2">Tidak punya waktu mencuci sendiri? Mau laundry tapi takut baju hilang dan hasilnya
+                        berantakan? Tenang, DiLaundry in Aja bisa bantu kamu ngelaundry sambil menikmati waktu
+                        istirahatmu dirumah dengan mesin cuci kualitas di kelasnya. Semua jenis baju, tas, dan
+                        sepatu kesayanganmu, serahkan kepada kita! Dijamin hasilnya rapi, bersih, plus wangi.</p>
                 </div>
             </div>
         </div>
-    </section>
-    <!-- ***** About Area Ends ***** -->
+    </div>
+    <!-- About End -->
 
-    <!-- ***** Features Big Item Start ***** -->
-    {{-- <section class="section" id="features">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12" data-scroll-reveal="enter left move 30px over 0.6s after 0.4s">
-                    <div class="features-item">
-                        <div class="features-icon">
-                            <img src="assets/images/features-icon-1.png" alt="">
-                        </div>
-                        <div class="features-content">
-                            <h4>Initial Work</h4>
-                            <p>Proin euismod sem ut diam ultricies, ut faucibus velit ultricies. Nam eu turpis quam. Duis ac condimentum eros.</p>
-                            <a href="#" class="text-button-icon">
-                                Learn More <i class="fa fa-arrow-right"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12" data-scroll-reveal="enter bottom move 30px over 0.6s after 0.4s">
-                    <div class="features-item">
-                        <div class="features-icon">
-                            <img src="assets/images/features-icon-1.png" alt="">
-                        </div>
-                        <div class="features-content">
-                            <h4>Master Planning</h4>
-                            <p>Proin euismod sem ut diam ultricies, ut faucibus velit ultricies. Nam eu turpis quam. Duis ac condimentum eros.</p>
-                            <a href="#" class="text-button-icon">
-                                Learn More <i class="fa fa-arrow-right"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12" data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
-                    <div class="features-item">
-                        <div class="features-icon">
-                            <img src="assets/images/features-icon-1.png" alt="">
-                        </div>
-                        <div class="features-content">
-                            <h4>Smooth Execution</h4>
-                            <p>Proin euismod sem ut diam ultricies, ut faucibus velit ultricies. Nam eu turpis quam. Duis ac condimentum eros.</p>
-                            <a href="#" class="text-button-icon">
-                                Learn More <i class="fa fa-arrow-right"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-primary text-white mt-5 pt-5 px-sm-3 px-md-5">
+        <div class="row pt-5">
+            <div class="col-lg-12 col-md-12 mb-12">
+                <a href=""><h1 class="text-secondary mb-3"><span class="text-white">Laundry</span> in Aja</h1></a>
+                <p>Di Laundry in Aja bisa bantu kamu ngelaundry sambil menikmati waktu
+                    istirahatmu dirumah dengan mesin cuci kualitas di kelasnya. Semua jenis baju, tas, dan
+                    sepatu kesayanganmu, serahkan kepada kita! Dijamin hasilnya rapi, bersih, plus wangi.</p>
+                    <br>
+            </div>
+            <div class="col-lg-12 col-md-12 mb-12">
+                <h4 class="text-white mb-4">Alamat</h4>
+                <p>Kalian Bisa Mencari kita di:</p>
+                <p><i class="fa fa-map-marker-alt mr-2"></i>JL. Pahlawan No.00, Jakarta Pusat</p>
+                <p><i class="fa fa-phone-alt mr-2"></i>+62812 2562 7432</p>
             </div>
         </div>
-    </section> --}}
-    <!-- ***** Features Big Item End ***** -->
-
-    <!-- ***** Features Big Item Start ***** -->
-    {{-- <section class="section" id="subscribe">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 offset-lg-2">
-                    <div class="section-heading">
-                        <h6>Subscribe Newsletters</h6>
-                        <h2>Don’t miss this chance!</h2>
-                    </div>
-                    <div class="subscribe-content">
-                        <p>Vivamus suscipit blandit nibh, in cursus mi. Proin vel blandit metus, et auctor elit. Vivamus tincidunt tristique convallis. Ut nec odio vel arcu euismod semper nec ac sem.</p>
-                        <div class="subscribe-form">
-                            <form id="subscribe-now" action="" method="get">
-                                <div class="row">
-                                    <div class="col-md-8 col-sm-12">
-                                      <fieldset>
-                                        <input name="email" type="text" id="email" placeholder="Enter your email..." required="">
-                                      </fieldset>
-                                    </div>
-                                    <div class="col-md-4 col-sm-12">
-                                      <fieldset>
-                                        <button type="submit" id="form-submit" class="main-button">Subscribe Now</button>
-                                      </fieldset>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> --}}
-    <!-- ***** Features Big Item End ***** -->
+    </div>
+    <div class="container-fluid bg-dark text-white py-4 px-sm-3 px-md-5">
+        <p class="m-0 text-center text-white">
+            &copy; <a class="text-white font-weight-medium">Laundry in Aja</a>. Di Desain oleh
+            <a class="text-white font-weight-medium" href="https://github.com/Andyatama">Andyatama</a>
+        </p>
+    </div>
+    <!-- Footer End -->
 
 
-    <!-- ***** Projects Area Starts ***** -->
-    {{-- <section class="section" id="projects">
-      <div class="container">
-        <div class="row">
-            <div class="col-lg-3">
-                <div class="section-heading">
-                    <h6>Our Projects</h6>
-                    <h2>Some of our latest projects</h2>
-                </div>
-                <div class="filters">
-                    <ul>
-                        <li class="active" data-filter="*">All</li>
-                        <li data-filter=".des">Web Design</li>
-                        <li data-filter=".dev">Web Development</li>
-                        <li data-filter=".gra">Graphics</li>
-                        <li data-filter=".tsh">Artworks</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-lg-9">
-                <div class="filters-content">
-                    <div class="row grid">
-                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 all des">
-                          <div class="item">
-                            <a href="assets/images/project-big-item-01.jpg" data-lightbox="image-1" data-title="Our Projects"><img src="{{asset('templatemo_breezed/assets/images/project-item-01.jpg')}}" alt=""></a>
-                          </div>
-                        </div>
-                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 all dev">
-                          <div class="item">
-                            <a href="assets/images/project-big-item-02.jpg" data-lightbox="image-1" data-title="Our Projects"><img src="{{asset('templatemo_breezed/assets/images/project-item-02.jpg')}}" alt=""></a>
-                          </div>
-                        </div>
-                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 all gra">
-                          <div class="item">
-                            <a href="assets/images/project-big-item-03.jpg" data-lightbox="image-1" data-title="Our Projects"><img src="{{asset('templatemo_breezed/assets/images/project-item-03.jpg')}}" alt=""></a>
-                          </div>
-                        </div>
-                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 all tsh">
-                          <div class="item">
-                            <a href="assets/images/project-big-item-04.jpg" data-lightbox="image-1" data-title="Our Projects"><img src="{{asset('templatemo_breezed/assets/images/project-item-04.jpg')}}" alt=""></a>
-                          </div>
-                        </div>
-                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 all dev">
-                          <div class="item">
-                            <a href="assets/images/project-big-item-05.jpg" data-lightbox="image-1" data-title="Our Projects"><img src="{{asset('templatemo_breezed/assets/images/project-item-05.jpg')}}" alt=""></a>
-                          </div>
-                        </div>
-                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 all des">
-                          <div class="item">
-                            <a href="assets/images/project-big-item-06.jpg" data-lightbox="image-1" data-title="Our Projects"><img src="{{asset('templatemo_breezed/assets/images/project-item-06.jpg')}}" alt=""></a>
-                          </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-      </div>
-    </section> --}}
-    <!-- ***** Projects Area Ends ***** -->
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>
 
-    <!-- ***** Testimonials Starts ***** -->
-    {{-- <section class="section" id="testimonials">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="section-heading">
-                        <h6>Digital Team</h6>
-                        <h2>young and talented members</h2>
-                    </div>
-                </div>
-                <div class="col-lg-12 col-md-12 col-sm-12 mobile-bottom-fix-big" data-scroll-reveal="enter left move 30px over 0.6s after 0.4s">
-                    <div class="owl-carousel owl-theme">
-                        <div class="item author-item">
-                            <div class="member-thumb">
-                                <img src="assets/images/member-item-01.jpg" alt="">
-                                <div class="hover-effect">
-                                    <div class="hover-content">
-                                        <ul>
-                                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-rss"></i></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <h4>.01 White Cheese</h4>
-                            <span>Digital Marketer</span>
-                        </div>
-                        <div class="item author-item">
-                            <div class="member-thumb">
-                                <img src="assets/images/member-item-04.jpg" alt="">
-                                <div class="hover-effect">
-                                    <div class="hover-content">
-                                        <ul>
-                                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-rss"></i></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <h4>.02 Snow Mary</h4>
-                            <span>Site Analyst</span>
-                        </div>
-                        <div class="item author-item">
-                            <div class="member-thumb">
-                                <img src="assets/images/member-item-02.jpg" alt="">
-                                <div class="hover-effect">
-                                    <div class="hover-content">
-                                        <ul>
-                                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-rss"></i></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <h4>.03 Johnny Egg</h4>
-                            <span>Digital Influencer</span>
-                        </div>
-                        <div class="item author-item">
-                            <div class="member-thumb">
-                                <img src="assets/images/member-item-05.jpg" alt="">
-                                <div class="hover-effect">
-                                    <div class="hover-content">
-                                        <ul>
-                                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-rss"></i></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <h4>.04 Catherine Phyu</h4>
-                            <span>Co Founder</span>
-                        </div>
-                        <div class="item author-item">
-                            <div class="member-thumb">
-                                <img src="assets/images/member-item-03.jpg" alt="">
-                                <div class="hover-effect">
-                                    <div class="hover-content">
-                                        <ul>
-                                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-rss"></i></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <h4>.05 Shao Lynn</h4>
-                            <span>Chief Marketing</span>
-                        </div>
-                        
-                        <div class="item author-item">
-                            <div class="member-thumb">
-                                <img src="assets/images/member-item-04.jpg" alt="">
-                                <div class="hover-effect">
-                                    <div class="hover-content">
-                                        <ul>
-                                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-rss"></i></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <h4>.06 Emma Honey</h4>
-                            <span>Digital Influencer</span>
-                        </div>
-                        
-                        <div class="item author-item">
-                            <div class="member-thumb">
-                                <img src="assets/images/member-item-06.jpg" alt="">
-                                <div class="hover-effect">
-                                    <div class="hover-content">
-                                        <ul>
-                                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-rss"></i></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <h4>.07 Oliva Sofie</h4>
-                            <span>Website Analyst</span>
-                        </div>
-                        
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> --}}
-    <!-- ***** Testimonials Ends ***** -->
-    
-    <!-- ***** Contact Us Area Starts ***** -->
-    {{-- <section class="section" id="contact-us">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 col-md-12 col-xs-12">
-                    <div class="left-text-content">
-                        <div class="section-heading">
-                            <h2>Apakah Pelayanan Kami Belum Cukup Memuaskan untuk Anda?</h2>
-                            <br>
-                            <h6>Hubungi Kami Disini</h6>
-                        </div>
-                        <ul class="contact-info ">
-                            <li><img src="{{asset('templatemo_breezed/assets/images/contact-info-01.png')}}" alt="">455-161-8909</li>
-                            <li><img src="{{asset('templatemo_breezed/assets/images/contact-info-02.png')}}" alt="">Laundryinaja@company.com</li>
-                            <li><img src="{{asset('templatemo_breezed/assets/images/contact-info-03.png')}}" alt="">www.laundryinaja.com</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-8 col-md-8 col-xs-12">
-                    <div class="contact-form">
-                        <form id="contact" action="" method="get">
-                          <div class="row">
-                            <div class="col-md-6 col-sm-12">
-                              <fieldset>
-                                <input name="name" type="text" id="name" placeholder="Your Name *" required="">
-                              </fieldset>
-                            </div>
-                            <div class="col-md-6 col-sm-12">
-                              <fieldset>
-                                <input name="phone" type="text" id="phone" placeholder="Your Phone" required="">
-                              </fieldset>
-                            </div>
-                            <div class="col-md-6 col-sm-12">
-                              <fieldset>
-                                <input name="email" type="email" id="email" placeholder="Your Email *" required="">
-                              </fieldset>
-                            </div>
-                            <div class="col-md-6 col-sm-12">
-                              <fieldset>
-                                <input name="subject" type="text" id="subject" placeholder="Subject">
-                              </fieldset>
-                            </div>
-                            <div class="col-lg-12">
-                              <fieldset>
-                                <textarea name="message" rows="6" id="message" placeholder="Message" required=""></textarea>
-                              </fieldset>
-                            </div>
-                            <div class="col-lg-12">
-                              <fieldset>
-                                <button type="submit" id="form-submit" class="main-button-icon">Send Message Now <i class="fa fa-arrow-right"></i></button>
-                              </fieldset>
-                            </div>
-                          </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> --}}
-    <!-- ***** Contact Us Area Ends ***** -->
-    
-    <!-- ***** Footer Start ***** -->
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 col-xs-12">
-                    <div class="text-center" style="color:white">
-                        <p>Copyright &copy; 2023 Achmad Setiawan A. 
-                        
-                        </p>
-                    </div>
-                </div>
-                {{-- <div class="col-lg-6 col-xs-12">
-                    <div class="right-text-content">
-                            <ul class="social-icons">
-                                <li><p>Follow Us</p></li>
-                                <li><a rel="nofollow" href="https://fb.com/templatemo"><i class="fa fa-facebook"></i></a></li>
-                                <li><a rel="nofollow" href="https://fb.com/templatemo"><i class="fa fa-twitter"></i></a></li>
-                                <li><a rel="nofollow" href="https://fb.com/templatemo"><i class="fa fa-linkedin"></i></a></li>
-                                <li><a rel="nofollow" href="https://fb.com/templatemo"><i class="fa fa-dribbble"></i></a></li>
-                            </ul>
-                    </div>
-                </div> --}}
-            </div>
-        </div>
-    </footer>
-    
 
-    <!-- jQuery -->
-    <script src="{{asset('templatemo_breezed/assets/js/jquery-2.1.0.min.js')}}"></script>
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="{{asset('laundry/lib/easing/easing.min.js')}}"></script>
+    <script src="{{asset('laundry/lib/waypoints/waypoints.min.js')}}"></script>
+    <script src="{{asset('laundry/lib/counterup/counterup.min.js')}}"></script>
+    <script src="{{asset('laundry/lib/owlcarousel/owl.carousel.min.js')}}"></script>
 
-    <!-- Bootstrap -->
-    <script src="{{asset('templatemo_breezed/assets/js/popper.js')}}"></script>
-    <script src="{{asset('templatemo_breezed/assets/js/bootstrap.min.js')}}"></script>
+    <!-- Contact Javascript File -->
+    <script src="{{asset('laundry/mail/jqBootstrapValidation.min.js')}}"></script>
+    <script src="{{asset('laundry/mail/contact.js')}}"></script>
 
-    <!-- Plugins -->
-    <script src="{{asset('templatemo_breezed/assets/js/owl-carousel.js')}}"></script>
-    <script src="{{asset('templatemo_breezed/assets/js/scrollreveal.min.js')}}"></script>
-    <script src="{{asset('templatemo_breezed/assets/js/waypoints.min.js')}}"></script>
-    <script src="{{asset('templatemo_breezed/assets/js/jquery.counterup.min.js')}}"></script>
-    <script src="{{asset('templatemo_breezed/assets/js/imgfix.min.js')}}"></script> 
-    <script src="{{asset('templatemo_breezed/assets/js/slick.js')}}"></script> 
-    <script src="{{asset('templatemo_breezed/assets/js/lightbox.js')}}"></script> 
-    <script src="{{asset('templatemo_breezed/assets/js/isotope.js')}}"></script> 
-    
-    <!-- Global Init -->
-    <script src="{{asset('templatemo_breezed/assets/js/custom.js')}}"></script>
+    <!-- Template Javascript -->
+    <script src="{{asset('laundry/js/main.js')}}"></script>
+</body>
 
-    <script>
-
-        $(function() {
-            var selectedClass = "";
-            $("p").click(function(){
-            selectedClass = $(this).attr("data-rel");
-            $("#portfolio").fadeTo(50, 0.1);
-                $("#portfolio div").not("."+selectedClass).fadeOut();
-            setTimeout(function() {
-              $("."+selectedClass).fadeIn();
-              $("#portfolio").fadeTo(50, 1);
-            }, 500);
-                
-            });
-        });
-
-    </script>
-
-  </body>
 </html>
