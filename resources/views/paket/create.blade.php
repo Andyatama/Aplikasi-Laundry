@@ -61,8 +61,8 @@
                 @enderror
             </div>
 
-            <button type="submit" class="btn btn-primary">Save</button>
-            <a href="{{ route('basic.index') }}" class="btn btn-default">kembali</a>
+            <button type="submit" class="btn btn-primary">Simpan</button>
+            <a href="{{ route('paket.index') }}" class="btn btn-default">kembali</a>
 
         </form>
     </div>

@@ -6,7 +6,7 @@
 
 <!-- Main Content goes here -->
 
-<a href="{{ route('basic.create') }}" class="btn btn-primary mb-3" style="background-color: white; color: black;">New User</a>
+<a href="{{ route('basic.create') }}" class="btn btn-primary mb-3" style="background-color: white; color: black;">Membuat Pengguna Baru</a>
 
 @if (session('message'))
 <div class="alert alert-success">

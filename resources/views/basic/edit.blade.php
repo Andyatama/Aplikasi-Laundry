@@ -13,7 +13,7 @@
             @method('put')
 
             <div class="form-group">
-                <label for="name">Name</label>
+                <label for="name">Nama Depan</label>
                 <input type="text" class="form-control @error('name') is-invalid @enderror" name="name" id="name"
                     placeholder="First name" autocomplete="off" value="{{ old('name') ?? $user->name }}">
                 @error('name')
@@ -22,7 +22,7 @@
             </div>
 
             <div class="form-group">
-                <label for="last_name">Last Name</label>
+                <label for="last_name">Nama Belakang</label>
                 <input type="text" class="form-control @error('last_name') is-invalid @enderror" name="last_name"
                     id="last_name" placeholder="Last name" autocomplete="off"
                     value="{{ old('last_name') ?? $user->last_name }}">
@@ -32,25 +32,28 @@
             </div>
 
             <div class="form-group">
-                <label for="role">Roles</label>
+                <label for="role">Peran</label>
                 <select class="form-select form-control @error('role') is-invalid @enderror" name="role" id="role"
-                    placeholder="Roles" autocomplete="off" value="{{ $user->role }}">
+                    placeholder="Peran" autocomplete="off" value="{{ $user->role }}">
 
                     @if ($user->role=='owner')
-                    <option name="role">pilih role</option>
+                    <option name="role">pilih peran</option>
                     <option selected value="owner">Owner</option>
                     <option value="kasir">Kasir</option>
+                    <option value="admin">Admin</option>
+
                     @elseif($user->role=='kasir')
-                    <option name="role">pilih role</option>
-                    <option value="owner">Owner</option>
+                    <option name="role">pilih peran</option>
                     <option selected value="kasir">Kasir</option>
+
                     @elseif($user->role=='admin')
-                    <option name="role">pilih role</option>
-                    <option selected value="owner">Owner</option>
+                    <option name="role">pilih peran</option>
+                    <option selected value="admin">Admin</option>
                     <option value="owner">Owner</option>
                     <option value="kasir">Kasir</option>
                     @else
-                    <option selected name="role">pilih role</option>
+                    <option selected name="role">pilih peran</option>
+                    <option value="admin">Owner</option>
                     <option value="owner">Owner</option>
                     <option value="kasir">Kasir</option>
                     @endif
@@ -94,8 +97,8 @@
                 @enderror
             </div>
 
-            <button type="submit" class="btn btn-primary">Save</button>
-            <a href="{{ route('basic.index') }}" class="btn btn-default">Back to list</a>
+            <button type="submit" class="btn btn-primary">Simpan</button>
+            <a href="{{ route('basic.index') }}" class="btn btn-default">Kembali</a>
 
         </form>
     </div>

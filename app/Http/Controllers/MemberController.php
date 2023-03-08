@@ -30,7 +30,7 @@ class MemberController extends Controller
     public function create()
     {
         return view('member.create', [
-            'title' => 'New Membership',
+            'title' => 'Membuat Membership Baru',
         ]);
     }
 
@@ -82,7 +82,7 @@ class MemberController extends Controller
     public function edit(Member $member)
     {
         return view('member.edit', [
-            'title' => 'Edit Membership',
+            'title' => 'Mengubah Data Membership',
             'member' => $member
         ]);
     }

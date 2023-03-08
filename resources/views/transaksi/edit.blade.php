@@ -243,11 +243,11 @@
                     </div>
                     @if ($transaksi->dibayar=='belum dibayar')
                         <div class="form-group col-md-12 col-12">
-                            <button type="submit" class="btn btn-primary float-right w-25">Save</button>
+                            <button type="submit" class="btn btn-primary float-right w-25">Simpan</button>
                         </div>
                     @elseif ($transaksi->dibayar=='dibayar')
                         <div class="form-group col-md-12 col-12">
-                            <button type="submit" class="btn btn-primary float-right w-25">Save</button>
+                            <button type="submit" class="btn btn-primary float-right w-25">Simpan</button>
                         </div>    
                     @endif
                 </form>

@@ -32,7 +32,7 @@ class OutletController extends Controller
     public function create()
     {
         return view('outlet.create', [
-            'title' => 'New Outlet',
+            'title' => 'Membuat Outlet Baru',
         ]);
     }
 
@@ -45,18 +45,10 @@ class OutletController extends Controller
     public function store(Request $request)
     {
 
-        // Outlet::create([
-        //     'nama' => $request->nama,
-        //     'alamat' => $request->alamat,
-        //     'no_telp' => $request->no_telp,
-        // ]);
-
-        $this->validate($request , [
-            'nama' => 'required',
-            'alamat' => 'required',
-            'jenis_kelamin' => 'required',
-            'tlp' => 'required|numeric'
-
+        Outlet::create([
+            'nama' => $request->nama,
+            'alamat' => $request->alamat,
+            'no_telp' => $request->no_telp,
         ]);
 
         Outlet::create($request->all());
@@ -84,7 +76,7 @@ class OutletController extends Controller
     public function edit(Outlet $outlet)
     {
         return view('outlet.edit', [
-            'title' => 'Edit Outlet',
+            'title' => 'Mengubah Data Outlet',
             'outlet' => $outlet
         ]);
     }

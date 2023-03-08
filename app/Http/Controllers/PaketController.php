@@ -37,7 +37,7 @@ class PaketController extends Controller
         $paket = Paket::with('outlet')->get();
 
         return view('paket.create', [
-            'title' => 'New Paket',
+            'title' => 'Membuat Paket Baru',
             'paket' => $paket,
             'outlet' => $outlet
         ]);
@@ -91,7 +91,7 @@ class PaketController extends Controller
         $outlet = Outlet::all();
 
          return view('paket.edit', [
-            'title' => 'Edit Membership',
+            'title' => 'Mengubah Data Paket',
             'paket' => $paket,
             'outlet' => $outlet
         ]);

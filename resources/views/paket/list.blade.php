@@ -6,7 +6,7 @@
 
 <!-- Main Content goes here -->
 
-<a href="{{ route('paket.create') }}" class="btn btn-primary mb-3" style="background-color: white; color: black;">New Paket</a>
+<a href="{{ route('paket.create') }}" class="btn btn-primary mb-3" style="background-color: white; color: black;">Tambah Paket</a>
 
 @if (session('message'))
 <div class="alert alert-success">

@@ -79,7 +79,7 @@ class TransaksiController extends Controller
             'id_user' => $user,
         ]);
 
-        return redirect('/dashboard/transaksi/bayar/'.$invoice)->with('message', 'User added successfully!');
+        return redirect('/dashboard/transaksi/bayar/'.$invoice)->with('message', 'Data Transaksi Berhasil diTambahkan!');
     }
 
     /**

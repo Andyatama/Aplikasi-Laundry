@@ -41,7 +41,7 @@ class BasicController extends Controller
         $users = User::with('outlet')->get();
 
         return view('basic.create', [
-            'title' => 'New User',
+            'title' => 'Membuat Pengguna Baru',
             'users' => $users,
             // 'outlet' => $outlet
         ]);
@@ -91,7 +91,7 @@ class BasicController extends Controller
         $user = User::find($id);
  
         return view('basic.edit', [
-            'title' => 'Edit User',
+            'title' => 'Edit Pengguna',
             // 'outlet' => $outlet,
             'user' => $user,
             

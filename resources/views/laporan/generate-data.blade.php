@@ -4,6 +4,8 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 
     <title>Laporan</title>
+    <!-- Favicon -->
+    <link href="{{ asset('img/laundry-machine.png') }}" rel="icon" type="image/png">
     <link href="{{ asset('vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
@@ -14,7 +16,7 @@
     <div class="row justify-content-center">
         <div class="col-8 mb-3 mt-3">
             <h1 class="text-center">Laporan Transaksi</h1>
-            <h1 class="text-center">Laundry </h1>
+            <h1 class="text-center">Laundry in Aja</h1>
         </div>
         <div class="col-10"><a href="{{ url('/home') }}"><i class="bi bi-arrow-left text-dark" style="font-size: 25px; "></i></a></div>
         <div class="col-10">
