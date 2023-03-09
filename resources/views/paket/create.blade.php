@@ -11,30 +11,31 @@
         <form action="{{ route('paket.store') }}" method="post">
             @csrf
 
-            <div class="form-group">
-                <label for="nama_paket">Nama Paket</label>
-                <input type="text" class="form-control @error('nama_paket') is-invalid @enderror"
-                    name="nama_paket" id="nama_paket" placeholder="nama paket" autocomplete="off"
-                    value="{{ old('nama_paket') }}">
-                @error('nama_paket')
-                <span class="text-danger">{{ $message }}</span>
-                @enderror
-            </div>
-
+            
             <div class="form-group">
                 <label for="outlet">Outlet</label>
                 <select class="form-select form-control @error('id_outlet') is-invalid @enderror" name="id_outlet"
-                    id="id_outlet" placeholder="Outlet" autocomplete="off" value="{{ old('id_outlet') }}">
-                    <option selected name="id_outlet">Outlet</option>
-                    @foreach ($outlet as $otl)
-                    <option value="{{ $otl->id }}">{{ $otl->nama }}</option>
-                    @endforeach
-                    <select>
+                id="id_outlet" placeholder="Outlet" autocomplete="off" value="{{ old('id_outlet') }}">
+                <option selected name="id_outlet">Outlet</option>
+                @foreach ($outlet as $otl)
+                <option value="{{ $otl->id }}">{{ $otl->nama }}</option>
+                @endforeach
+                <select>
                         @error('outlet')
                         <span class="text-danger">{{ $message }}</span>
                         @enderror
-            </div>
+                    </div>
 
+                <div class="form-group">
+                    <label for="nama_paket">Nama Paket</label>
+                    <input type="text" class="form-control @error('nama_paket') is-invalid @enderror"
+                        name="nama_paket" id="nama_paket" placeholder="nama paket" autocomplete="off"
+                        value="{{ old('nama_paket') }}">
+                    @error('nama_paket')
+                        <span class="text-danger">{{ $message }}</span>
+                    @enderror
+                </div>
+                    
             <div class="form-group">
                 <label for="jenis">Jenis</label>
                 <select class="form-select form-control @error('jenis') is-invalid @enderror" name="jenis" id="jenis"

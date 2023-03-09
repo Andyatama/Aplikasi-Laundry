@@ -52,10 +52,6 @@ class TransaksiController extends Controller
             'transaksi' => $transaksi
         ]);
 
-        $this->validate($req , [
-            'member' => 'required',
-            'outlet' => 'required'
-        ]);
     }
 
     /**
@@ -82,6 +78,11 @@ class TransaksiController extends Controller
             'status' => "baru",
             'dibayar' => "belum dibayar",
             'id_user' => $user,
+        ]);
+
+        $this->validate($request , [
+            'id_outlet' => 'required',
+            'id_member' => 'required',
         ]);
 
         return redirect('/dashboard/transaksi/bayar/'.$invoice)->with('message', 'Data Transaksi Berhasil diTambahkan!');
@@ -145,14 +146,14 @@ class TransaksiController extends Controller
                     <label for="keterangan"
                         class="form-label">Deskripsi</label>
                     <textarea class="form-control" id="keterangan" name = "keterangan"
-                        rows="3" aria-label="Disabled input example" readonly>-</textarea>
+                        rows="3" aria-label="Disabled input example" readonly>'.$paket->nama_paket.' dan Harganya Rp.'.number_format($paket->harga,0,',','.') .'</textarea>
                 </div>
                 
 
                 <div class="col-12">
                 <label for="qty"
                         class="form-label mt-2">Jumlah Barang</label>
-                <input type="number" name="qty" id="qty" class="form-control mb-3" min="1" required>
+                <input type="number" name="qty" id="qty" class="form-control mb-3" min="0" required>
                 </div>
                 
                 <div class="col-md-4 col-12">
@@ -171,9 +172,9 @@ class TransaksiController extends Controller
       public function tambahpaket(Request $req, $id_transaksi, $id_paket)
     {
 
-        $this->validate($req , [
-            'qty' => 'required|numeric|min:0',
-            'diskon' => 'required'
+        $validate = $req->validate([
+            'qty' => ['required|numeric|min:0'],
+            'keterangan' => ['max:255']
         ]);
 
         $validate['id_transaksi'] = $id_transaksi;
@@ -256,7 +257,7 @@ class TransaksiController extends Controller
         $this->validate($req , [
             'dibayar' => 'required',
             'status' => 'required',
-            'tgl_bayar' => 'required|date_equals'
+            'tgl_bayar' => 'required|date'
         ]);
 
         Transaksi::where('id',$id)->update($data);

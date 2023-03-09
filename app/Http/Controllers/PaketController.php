@@ -51,17 +51,26 @@ class PaketController extends Controller
      */
     public function store(Request $request)
     {
-        Paket::create([
-            'id_outlet' => $request->id_outlet,
-            'jenis' => $request->jenis,
-            'nama_paket' => $request->nama_paket,
-            'harga' => $request->harga,
+        // Paket::create([
+        //     'id_outlet' => $request->id_outlet,
+        //     'jenis' => $request->jenis,
+        //     'nama_paket' => $request->nama_paket,
+        //     'harga' => $request->harga,
+        // ]);
+
+        $this->validate($request , [
+            'id_outlet' => 'required',
+            'jenis' => 'required',
+            'nama_paket' => 'required|alpha|max:255',
+            'harga' => 'required|numeric',
         ]);
+
+        Paket::create($request->all());
 
         // $validate = $request->validate([
         //     'id_outlet' => ['required'],
         //     'jenis' => ['required'],
-        //     'nama_paket' => ['required'],
+        //     'nama_paket' => ['required|apha'],
         //     'harga' => ['required|numeric']
         // ]);
 
@@ -94,6 +103,13 @@ class PaketController extends Controller
             'title' => 'Mengubah Data Paket',
             'paket' => $paket,
             'outlet' => $outlet
+        ]);
+
+        $this->validate($request , [
+            'id_outlet' => 'required',
+            'jenis' => 'required',
+            'nama_paket' => 'required|alpha|max:255',
+            'harga' => 'required|numeric',
         ]);
     }
 

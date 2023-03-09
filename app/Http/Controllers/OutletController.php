@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Outlet;
 use Illuminate\Http\Request;
-use Validator;
 
 class OutletController extends Controller
 {
@@ -52,8 +51,8 @@ class OutletController extends Controller
         // ]);
 
         $this->validate($request , [
-            'nama' => 'required|max:255',
-            'alamat' => 'required|max:255',
+            'nama' => 'required|alpha|max:255',
+            'alamat' => 'required|alpha|max:255',
             'telepon' => 'required|numeric'
         ]);
 
@@ -102,9 +101,9 @@ class OutletController extends Controller
         $outlet->update($data);
 
         $this->validate($request , [
-            'nama' => 'required|max:255',
-            'alamat' => 'required|max:255',
-            'no_tlp' => 'required|numeric'
+            'nama' => 'required|alpha|max:255',
+            'alamat' => 'required|alpha|max:255',
+            'telepon' => 'required|numeric'
         ]);
 
         return redirect()->route('outlet.index')->with('message', 'Berhasil Memperbarui Outlet!');
