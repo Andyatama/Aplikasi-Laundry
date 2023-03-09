@@ -43,19 +43,6 @@
                         <span class="text-danger">{{ $message }}</span>
                         @enderror
             </div>
-            {{-- <div class="form-group">
-                <label for="outlet">Outlet</label>
-                <select class="form-select form-control @error('id_outlet') is-invalid @enderror" name="id_outlet" id="id_outlet"
-                    placeholder="Outlet" autocomplete="off" value="{{ old('id_outlet') }}">
-                    <option selected name="id_outlet">Outlet</option>
-                    @foreach ($outlet as $otl)
-                        <option value="{{ $otl->id }}">{{ $otl->nama }}</option>
-                    @endforeach
-                    <select>
-                        @error('role')
-                        <span class="text-danger">{{ $message }}</span>
-                        @enderror
-            </div> --}}
 
             <div class="form-group">
                 <label for="email">Email</label>

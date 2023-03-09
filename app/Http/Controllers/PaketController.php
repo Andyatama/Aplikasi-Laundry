@@ -61,7 +61,7 @@ class PaketController extends Controller
         $this->validate($request , [
             'id_outlet' => 'required',
             'jenis' => 'required',
-            'nama_paket' => 'required|alpha|max:255',
+            'nama_paket' => 'required|alpha_dash|max:255',
             'harga' => 'required|numeric',
         ]);
 

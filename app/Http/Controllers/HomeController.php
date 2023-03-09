@@ -27,28 +27,58 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $users = User::count();
-        $member = Member::count();
-        $paket = Paket::count();
-        $trx = Transaksi::count();
+        $users = User::all();
+        $member = Member::all();
+        $paket = Paket::all();
+        $transaksi = Transaksi::all();
 
-        $widget = [
-            'users' => $users,
-            'member' => $member,
-            'paket' => $paket,
-            'trx' => $trx
-            //...
-        ];
         $transaksiPaid = Transaksi::where('dibayar', 'dibayar')->get();
 
-        return view('home', compact('widget'), [
-            'transaksiPaid' => $transaksiPaid
-        ]);
-            
-       
+        // return view('home', compact('widget'), [
+        //     'transaksiPaid' => $transaksiPaid
+        // ]);
 
-       
+        return view('home', compact(
+            'users', 
+            'member', 
+            'paket', 
+            'transaksi', 
+            'transaksiPaid', 
+            )) ;
+    }
 
+    public function cariTgl(Request $request){
+
+        $users = User::all();
+        $member = Member::all();
+        $paket = Paket::all();
+        $transaksi = Transaksi::all();
+
+        // $widget = [
+        //     'users' => $users,
+        //     'member' => $member,
+        //     'paket' => $paket,
+        //     'transaksi' => $transaksi
+        //     //...
+        // ];
+        $transaksiPaid = Transaksi::where('dibayar', 'dibayar')->get();
+
+        $from = $request->from . ' ' . '00:00:00';
+        $to = $request->to . ' ' . '23:59:59';
+
+        $transaksi = Transaksi::whereBetween('tgl_bayar', [$from, $to])->get();
+
+        return view('home', compact(
+            'users', 
+            'member', 
+            'paket', 
+            'transaksi', 
+            'transaksiPaid', 
+            'from',
+            'to'
+            )) ;
+
+        // return view('home', ['trx' => $trx, 'from' => $from, 'to' => $to]);
     }
 
     public function generateData() {

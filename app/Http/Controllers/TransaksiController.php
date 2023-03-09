@@ -23,7 +23,7 @@ class TransaksiController extends Controller
     {
         $outlet = Outlet::all();
         $member = Member::all();
-        $transaksi = Transaksi::all();
+        $transaksi = Transaksi::paginate(10);
 
         return view('transaksi.list', [
             'title' => 'Data Transaksi',
@@ -146,7 +146,7 @@ class TransaksiController extends Controller
                     <label for="keterangan"
                         class="form-label">Deskripsi</label>
                     <textarea class="form-control" id="keterangan" name = "keterangan"
-                        rows="3" aria-label="Disabled input example" readonly>'.$paket->nama_paket.' dan Harganya Rp.'.number_format($paket->harga,0,',','.') .'</textarea>
+                        rows="3" aria-label="Disabled input example" readonly>Paket '.$paket->nama_paket.' dan Harganya Rp.'.number_format($paket->harga,0,',','.') .'</textarea>
                 </div>
                 
 
@@ -173,7 +173,7 @@ class TransaksiController extends Controller
     {
 
         $validate = $req->validate([
-            'qty' => ['required|numeric|min:0'],
+            'qty' => ['required'],
             'keterangan' => ['max:255']
         ]);
 

@@ -20,6 +20,8 @@ use Illuminate\Support\Facades\Route;
 // });
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::post('/home/cariTgl', 'HomeController@cariTgl')->name('cariTgl');
+
 Route::get('/', 'IndexController@index')->name('home-page');
 
 Route::get('/profile', 'ProfileController@index')->name('profile');
