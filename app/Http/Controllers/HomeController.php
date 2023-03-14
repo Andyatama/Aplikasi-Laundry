@@ -80,9 +80,4 @@ class HomeController extends Controller
 
         // return view('home', ['trx' => $trx, 'from' => $from, 'to' => $to]);
     }
-
-    public function generateData() {
-
-        
-    }
 }

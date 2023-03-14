@@ -7,6 +7,9 @@
     <link href="{{ asset('vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <link href="{{ asset('img/laundry-machine.png') }}" rel="icon" type="image/png">
+
   
 </head>
 <body>
@@ -59,11 +62,11 @@
                               </div>
                               <div class="company-phone  mb-1">
                                   <span class="text-muted">
-                                    {{ $transaksi->outlet->tlp }}
+                                    {{ $transaksi->outlet->telepon }}
                                 </span>
                               </div>
                               <div class="company-kasir  mb-1 mb-1">
-                                  <span class="text-muted">Yang Melayani - 
+                                  <span class="text-muted">Kasir - 
                                     {{ $transaksi->user->name }} / {{ Auth::user()->role }}
                                 </span>
                               </div>
@@ -106,7 +109,7 @@
                               </div>
                               <div class="company-phone  mb-1">
                                   <span class="text-muted">
-                                    {{ $transaksi->member->tlp }}
+                                    {{ $transaksi->member->telepon }}
                                 </span>
                               </div>
                           </div>
@@ -129,7 +132,7 @@
                                   <tr>
                                       <td>{{ $dtl->paket->jenis }}</td>
                                       <td>{{ $dtl->paket->nama_paket }}</td>
-                                      <td>{{ $dtl->qty }}</td>
+                                      <td>{{ $dtl->qty }}Kg</td>
                                       <td>{{ number_format($dtl->paket->harga, 2) }}/Cucian</td>
                                       <td>{{ $dtl->keterangan }}</td>
                                   </tr>

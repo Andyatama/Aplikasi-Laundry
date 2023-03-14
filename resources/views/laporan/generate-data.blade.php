@@ -20,8 +20,23 @@
             <h1 class="text-center">Laundry in Aja</h1>
         </div>
         <div class="col-10"><a href="{{ url('/home') }}"><i class="bi bi-arrow-left text-dark" style="font-size: 25px; "></i></a></div>
+        
         <div class="col-10">
             <table class="table table-bordered table-stripped">
+
+                <div class="card-body">
+                    <form action="{{ url('/home/generate-data/cariTgl')}}" method="POST">
+                        @csrf
+                        <div class="form-group col-md-3 col-12">
+                            <input type="text" name="from" class="form-control" placeholder="Tanggal Awal" onfocusin="(this.type='date')" onfocusout="(this.type='text')">
+                        </div>
+                        <div class="form-group col-md-3 col-12">
+                            <input type="text" name="to" class="form-control" placeholder="Tanggal Akhir" onfocusin="(this.type='date')" onfocusout="(this.type='text')">
+                            <br>
+                            <button type="submit" class="btn btn-primary " style="width: 100%">Cari tanggal</button>
+                        </div>
+                    </form>
+                </div>
         <thead>
             <tr>
                 <th>No</th>

@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Transaksi;
+use App\Outlet;
+use App\Member;
 use Illuminate\Http\Request;
 
 class GenerateDataController extends Controller
@@ -20,6 +22,41 @@ class GenerateDataController extends Controller
             'generateData' => $generateData
         ]);
         
+    }
+
+    public function cariTgl(Request $request){
+
+        $transaksi = Transaksi::all();
+        // $outlet = Outlet::all();
+        // $member = Member::all();
+
+        // $widget = [
+        //     'users' => $users,
+        //     'member' => $member,
+        //     'paket' => $paket,
+        //     'transaksi' => $transaksi
+        //     //...
+        // ];
+        $generateData = Transaksi::where('dibayar', 'dibayar')->get();
+
+        $from = $request->from . ' ' . '00:00:00';
+        $to = $request->to . ' ' . '23:59:59';
+
+        $transaksi = Transaksi::whereBetween('tgl_bayar', [$from, $to])->get();
+
+        return view('home', compact(
+            // 'id_outlet', 
+            // 'kode_invoice', 
+            // 'id_member', 
+            // 'tgl_bayar', 
+            // 'generateData', 
+            // 'status', 
+            // 'dibayar', 
+            'from',
+            'to'
+            )) ;
+
+        // return view('home', ['trx' => $trx, 'from' => $from, 'to' => $to]);
     }
 
     /**

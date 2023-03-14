@@ -76,8 +76,9 @@
                             onclick="return confirm('Anda yakin akan Menghapus ini?')"><i
                                 class="fas fa-fw fa-trash text-white"></i></button>
                     </form>
-                    <a href="{{ url('/dashboard/laporan-transaksi/'. $trx->kode_invoice) }}" class="btn ml-2 rounded-circle py-2"
-                        style="background-color: #08eb00;"><i class="fas fa-fw fa-print text-white"></i></a>
+                    {{-- <a href="{{ url('/dashboard/laporan-transaksi/'. $trx->kode_invoice) }}" class="btn ml-2 rounded-circle py-2"
+                        style="background-color: #08eb00;"><i class="fas fa-fw fa-print text-white"></i>
+                    </a> --}}
                 </div>
             </td>
         </tr>

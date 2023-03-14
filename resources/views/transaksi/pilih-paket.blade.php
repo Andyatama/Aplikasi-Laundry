@@ -47,7 +47,7 @@
                             <div class="col-md-4 col-12">
                                 <div class="form-group">
                                     <label for="biaya_tambahan">Biaya Tambahan</label>
-                                    <input type="number" style=" border-bottom: 2px solid black;"
+                                    <input type="numeric" style=" border-bottom: 2px solid black;"
                                         class="form-control @error('biaya_tambahan') is-invalid @enderror" min="0"
                                         name="biaya_tambahan" id="biaya_tambahan" placeholder="Biaya Tambahan"
                                         autocomplete="off" value="{{ old('biaya_tambahan') }}">
@@ -59,7 +59,7 @@
                             <div class="col-md-4 col-12">
                                 <div class="form-group">
                                     <label for="pajak">Pajak</label>
-                                    <input type="number" style=" border-bottom: 2px solid black;"
+                                    <input type="numeric" style=" border-bottom: 2px solid black;"
                                         class="form-control  @error('pajak') is-invalid @enderror" min="0" name="pajak"
                                         id="pajak" placeholder="Pajak" autocomplete="off"
                                         value="{{ old('pajak') }}">
@@ -71,7 +71,7 @@
                             <div class="col-md-4 col-12">
                                 <div class="form-group">
                                     <label for="diskon">Diskon</label>
-                                    <input type="number" style=" border-bottom: 2px solid black;"
+                                    <input type="numeric" style=" border-bottom: 2px solid black;"
                                         class="form-control  @error('diskon') is-invalid @enderror" min="0" name="diskon"
                                         id="diskon" placeholder="Diskon" autocomplete="off"
                                         value="{{ old('diskon') }}">
