@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Transaksi;
+use App\Outlet;
+use App\Member;
 use Illuminate\Http\Request;
 
 class GenerateDataController extends Controller
@@ -14,10 +16,10 @@ class GenerateDataController extends Controller
      */
     public function index()
     {
-        $generateData = Transaksi::where('dibayar', 'dibayar')->get();
+        $transaksi = Transaksi::where('dibayar', 'dibayar')->get();
 
         return view('laporan.generate-data', [
-            'generateData' => $generateData
+            'transaksi' => $transaksi
         ]);
         
     }
@@ -27,6 +29,27 @@ class GenerateDataController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+     public function cariTgl(Request $request){
+
+        // $transaksi = Transaksi::all();
+        // $outlet = Outlet::all();
+        // $member = Member::all();
+
+        // $generateData = Transaksi::where('dibayar', 'dibayar')->get();
+
+        $from = $request->from . ' ' . '00:00:00';
+        $to = $request->to . ' ' . '23:59:59';
+
+        $transaksi = Transaksi::whereBetween('tgl_bayar', [$from, $to])->get();
+        
+        return view('laporan.generate-data', compact(
+            'transaksi',
+            'from',
+            'to'
+            ));
+    }
+
     public function create()
     {
         //

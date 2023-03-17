@@ -202,22 +202,9 @@
     @endif
         
     <div class="row">
-        <div class="col-md-3 col-12">
+        {{-- <div class="col-md-3 col-12">
             <a href="{{ url('/home/generate-data') }}" class="btn btn-primary mb-2" style="background-color: white; color: black;">Cetak Data</a>
-        </div>
-
-        <div class="card-body">
-            <form action="{{ url('/home/cariTgl')}}" method="POST">
-                @csrf
-                <div class="form-group">
-                    <input type="text" name="from" class="form-control" placeholder="Tanggal Awal" onfocusin="(this.type='date')" onfocusout="(this.type='text')">
-                </div>
-                <div class="form-group">
-                    <input type="text" name="to" class="form-control" placeholder="Tanggal Akhir" onfocusin="(this.type='date')" onfocusout="(this.type='text')">
-                </div>
-                <button type="submit" class="btn btn-primary" style="width: 100%">Cari tanggal</button>
-            </form>
-        </div>
+        </div> --}}
 
         <div class="col-12">
             @if($transaksi ?? '')

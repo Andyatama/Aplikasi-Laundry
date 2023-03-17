@@ -23,7 +23,7 @@ class TransaksiController extends Controller
     {
         $outlet = Outlet::all();
         $member = Member::all();
-        $transaksi = Transaksi::paginate(10);
+        $transaksi = Transaksi::all();
 
         return view('transaksi.list', [
             'title' => 'Data Transaksi',
@@ -52,6 +52,10 @@ class TransaksiController extends Controller
             'transaksi' => $transaksi
         ]);
 
+        $validate = $req->validate([
+            'id_outlet' => ['required'],
+            'id_member' => ['required']
+        ]);
     }
 
     /**
@@ -80,9 +84,9 @@ class TransaksiController extends Controller
             'id_user' => $user,
         ]);
 
-        $this->validate($request , [
-            'id_outlet' => 'required',
-            'id_member' => 'required',
+        $validate = $request->validate([
+            'id_outlet' => ['required'],
+            'id_member' => ['required']
         ]);
 
         return redirect('/dashboard/transaksi/bayar/'.$invoice)->with('message', 'Data Transaksi Berhasil diTambahkan!');
@@ -200,11 +204,18 @@ class TransaksiController extends Controller
         $transaksi = Transaksi::find($id);
         $details = TransaksiDetail::where('id_transaksi', $id)->get();
 
-        $this->validate($req , [
-            'batas_waktu' => 'required|date',
-            'biaya_tambahan' => 'required|numeric',
-            'pajak' => 'required|numeric',
-            'diskon' => 'required|numeric'
+        // $this->validate($req , [
+        //     'batas_waktu' => 'required|date',
+        //     'biaya_tambahan' => 'required|numeric',
+        //     'pajak' => 'required|numeric',
+        //     'diskon' => 'required|numeric'
+        // ]);
+
+        $validate = $req->validate([
+            'batas_waktu' => ['required', 'date'],
+            'biaya_tambahan' => ['required', 'numeric'],
+            'pajak' => ['required', 'numeric'],
+            'diskon' => ['required', 'numeric']
         ]);
 
         $subtotal=0;
@@ -254,10 +265,10 @@ class TransaksiController extends Controller
         $data['status'] = $req->status;
         $data['tgl_bayar'] = $req->tgl_bayar;
 
-        $this->validate($req , [
-            'dibayar' => 'required',
-            'status' => 'required',
-            'tgl_bayar' => 'required|date'
+        $validate = $req->validate([
+            'dibayar' => ['required'],
+            'status' => ['required'],
+            'tgl_bayar' => ['required', 'date']
         ]);
 
         Transaksi::where('id',$id)->update($data);

@@ -111,7 +111,6 @@
     </div>
     <!-- About End -->
 
-
     <!-- Footer Start -->
     <div class="container-fluid bg-primary text-white mt-5 pt-5 px-sm-3 px-md-5">
         <div class="row pt-5">
@@ -122,14 +121,10 @@
                     sepatu kesayanganmu, serahkan kepada kita! Dijamin hasilnya rapi, bersih, plus wangi.</p>
                     <br>
             </div>
-            <div class="col-lg-12 col-md-12 mb-12">
-                <h4 class="text-white mb-4">Alamat</h4>
-                <p>Kalian Bisa Mencari kita di:</p>
-                <p><i class="fa fa-map-marker-alt mr-2"></i>JL. Pahlawan No.00, Jakarta Pusat</p>
-                <p><i class="fa fa-phone-alt mr-2"></i>+62812 2562 7432</p>
-            </div>
         </div>
     </div>
+
+
     <div class="container-fluid bg-dark text-white py-4 px-sm-3 px-md-5">
         <p class="m-0 text-center text-white">
             &copy; <a class="text-white font-weight-medium">Laundry in Aja</a>. Di Desain oleh

@@ -257,26 +257,12 @@
 </div>
 
 
-<script>
-    $(function(){
-        var dtToday = new Date();
 
-        var month = dtToday:getMonth() - 5;
-        var day = dtToday:getDate();
-        var year = dtToday:getFullYear();
-        if(month < 10 )
-            month = '0' + month.toString();
-        if(day < 10 )
-            day = '0' + day.toString();
-
-        var minDate = year+'-' + month + '-' + day;
-        
-        $('.tgl_bayar').attr('min', minDate);
-    });
-</script>
 
 <!-- End of Main Content -->
 @endsection
+
+
 
 @push('notif')
 @if (session('success'))
@@ -304,3 +290,22 @@
 @endif
 @endpush
 
+@section('js')
+<script>
+    $(function(){
+        var dtToday = new Date();
+
+        var month = dtToday:getMonth() + 2;
+        var day = dtToday:getDate();
+        var year = dtToday:getFullYear();
+        if(month < 10 )
+            month = '0' + month.toString();
+        if(day < 10 )
+            day = '0' + day.toString();
+
+        var minDate = year+'-' + month + '-' + day;
+        
+        $('#tgl_bayar').attr('min', minDate);
+    });
+</script>
+@endsection

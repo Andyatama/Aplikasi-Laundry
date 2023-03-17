@@ -11,6 +11,7 @@
         "php": "^8.0.2",
         "arielmejiadev/larapex-charts": "^5.2",
         "devmarketer/easynav": "^1.0",
+        "dompdf/dompdf": "^2.0",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
         "laravel/fortify": "^1.6",

@@ -11,6 +11,9 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.13.3/css/jquery.dataTables.min.css">
+
+    <!-- Favicon -->
+    <link href="{{ asset('img/laundry-machine.png') }}" rel="icon" type="image/png">
   
 </head>
 <body>
@@ -22,6 +25,21 @@
         <div class="col-10"><a href="{{ url('/home') }}"><i class="bi bi-arrow-left text-dark" style="font-size: 25px; "></i></a></div>
         <div class="col-10">
             <table class="table table-bordered table-stripped">
+
+                <div class="card-body">
+                    <form action="{{ route('cariTgl')}}" method="POST">
+                        @csrf
+                        <div class="form-group col-md-3 col-12">
+                            <input type="text" name="from" class="form-control" placeholder="Tanggal Awal" onfocusin="(this.type='date')" onfocusout="(this.type='text')">
+                        </div>
+                        <div class="form-group col-md-3 col-12">
+                            <input type="text" name="to" class="form-control" placeholder="Tanggal Akhir" onfocusin="(this.type='date')" onfocusout="(this.type='text')">
+                            <br>
+                            <button type="submit" class="btn btn-primary " style="width: 100%">Cari tanggal</button>
+                        </div>
+                    </form>
+                </div>
+                
         <thead>
             <tr>
                 <th>No</th>
@@ -36,7 +54,7 @@
             </tr>
         </thead>
         <tbody>
-            @foreach ($generateData as $trx)
+            @foreach ($transaksi as $trx)
             <tr>
                 <td scope="row">{{ $loop->iteration }}</td>
                 <td>{{ $trx->kode_invoice }}</td>
@@ -60,6 +78,7 @@
                     <span class="text-black">{{$trx->status}}</span>
                     @endif
                 </td>
+
                 <td>
                     @if ($trx->dibayar=='dibayar')
                     <span class=" text-black"

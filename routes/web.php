@@ -30,6 +30,7 @@ Route::put('/profile', 'ProfileController@update')->name('profile.update');
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'generateData']);
 
 Route::get('/home/generate-data', 'GenerateDataController@index')->name('generate-data');
+Route::post('/home/generate-data/cariTgl', 'GenerateDataController@cariTgl')->name('cariTgl');
 
 
 Route::get('/about', function () {
@@ -67,6 +68,8 @@ Route::group(
         Route::post('/add-diskon/{id}',[App\Http\Controllers\transaksiController::class,'tambahbiaya']);
 
         Route::get('/laporan-transaksi/{kode_invoice}',[App\Http\Controllers\NotaController::class,'index']);
+
+        
 
 
     }

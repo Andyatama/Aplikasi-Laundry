@@ -103,7 +103,7 @@ class OutletController extends Controller
         $this->validate($request , [
             'nama' => 'required|alpha|max:255',
             'alamat' => 'required|alpha|max:255',
-            'telepon' => 'required|numeric'
+            'telepon' => 'required|numeric|max:13|min:12'
         ]);
 
         return redirect()->route('outlet.index')->with('message', 'Berhasil Memperbarui Outlet!');

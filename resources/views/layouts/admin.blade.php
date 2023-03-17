@@ -26,6 +26,9 @@
     <!-- Favicon -->
     <link href="{{ asset('img/laundry-machine.png') }}" rel="icon" type="image/png">
 
+    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/themes/base/jquery-ui.css" type="text/css" media="all">
+
+
     
 
     @stack('css')
@@ -134,6 +137,13 @@
                 <a class="nav-link" href="{{ route('profile') }}">
                     <i class="fas fa-fw fa-user"></i>
                     <span>{{ __('Profile') }}</span>
+                </a>
+            </li>
+
+            <li class="nav-item {{ Nav::isRoute('generate-data') }}">
+                <a class="nav-link" href="{{ route('generate-data') }}">
+                    <i class="fas fa-fw fa-user"></i>
+                    <span>{{ __('laporan') }}</span>
                 </a>
             </li>
             
@@ -314,7 +324,26 @@
     <script src="{{ asset('vendor/bootstrap/js/bootstrap.min.js') }}"></script>
     <script src="{{ asset('vendor/jquery-easing/jquery.easing.min.js') }}"></script>
     <script src="{{ asset('js/sb-admin-2.min.js') }}"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
     @yield('js')
+    <script>
+        $(function(){
+            var dtToday = new Date();
+    
+            var month = dtToday:getMonth() + 2;
+            var day = dtToday:getDate();
+            var year = dtToday:getFullYear();
+            if(month < 10 )
+                month = '0' + month.toString();
+            if(day < 10 )
+                day = '0' + day.toString();
+    
+            var minDate = year+'-' + month + '-' + day;
+            
+            $('#tgl_bayar').attr('min', minDate);
+        });
+    </script>
     
 </body>
 
