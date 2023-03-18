@@ -50,10 +50,10 @@ class OutletController extends Controller
         //     'no_telp' => $request->no_telp,
         // ]);
 
-        $this->validate($request , [
-            'nama' => 'required|alpha|max:255',
-            'alamat' => 'required|alpha|max:255',
-            'telepon' => 'required|numeric'
+        $validate = $request->validate([
+            'nama' => ['required', 'alpha'],
+            'alamat' => ['required', 'alpha'],
+            'telepon' => ['required', 'numeric']
         ]);
 
         Outlet::create($request->all());
@@ -100,10 +100,10 @@ class OutletController extends Controller
         $outlet = Outlet::find($id);
         $outlet->update($data);
 
-        $this->validate($request , [
-            'nama' => 'required|alpha|max:255',
-            'alamat' => 'required|alpha|max:255',
-            'telepon' => 'required|numeric|max:13|min:12'
+        $validate = $request->validate([
+            'nama' => ['required', 'alpha'],
+            'alamat' => ['required', 'alpha'],
+            'telepon' => ['required', 'numeric']
         ]);
 
         return redirect()->route('outlet.index')->with('message', 'Berhasil Memperbarui Outlet!');

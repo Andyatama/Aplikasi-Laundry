@@ -59,7 +59,6 @@ class BasicController extends Controller
             'name' => $request->name,
             'last_name' => $request->last_name,
             'email' => $request->email,
-            // 'id_outlet' => $request->id_outlet,
             'role' => $request->role,
             'password' => Hash::make($request->password)
         ]);

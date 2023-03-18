@@ -53,7 +53,7 @@ class MemberController extends Controller
             'nama' => 'required|alpha|max:255',
             'alamat' => 'required|alpha|max:255',
             'jenis_kelamin' => 'required',
-            'telepon' => 'required|numeric|max:13|min:12'
+            'telepon' => 'required|numeric'
 
         ]);
 
